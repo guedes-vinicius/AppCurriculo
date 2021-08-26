@@ -10,6 +10,7 @@ import {
 import Icon from 'react-native-vector-icons/Feather';
 
 import foto from './assets/foto.jpg';
+import Card from './components/Card';
 
 const App = () => {
   function handleRedeSocial(rede_social) {
@@ -51,40 +52,23 @@ const App = () => {
           </View>
         </View>
 
-        <View style={style.card_container}>
-          <View style={style.card}>
-            <View style={style.card_header}>
-              <Text>Experiencia Profissional</Text>
-            </View>
-            <View style={style.card_content}>
-              <Text style={style.card_content_text}>
-                ENTER CONSULTORIA Suporte sistema ERP
-              </Text>
-              <Text style={style.card_content_text}>
-                INTEGRAL CS suporte sistema ERP
-              </Text>
-            </View>
-          </View>
-        </View>
-        <View style={style.card_container}>
-          <View style={style.card}>
-            <View style={style.card_header}>
-              <Text>Linguagens e tecnologias</Text>
-            </View>
-            <View style={style.card_content}>
-              <Text style={style.card_content_text}>
-                WEB - Wix, HTML5+CSS3, Javascript
-              </Text>
-              <Text style={style.card_content_text}>
-                MOBILE - Dart(Flutter), Javascript(React Native)
-              </Text>
-              <Text style={style.card_content_text}>
-                BANCO DE DADOS - SQL Server, SQFlite(sqlite para Flutter)
-              </Text>
-              <Text style={style.card_content_text}>EXTRA - Python</Text>
-            </View>
-          </View>
-        </View>
+        <Card titulo="Tecnologias">
+          <Text style={style.card_content_text}>
+            MOBILE - Dart(Flutter), Javascript(React Native)
+          </Text>
+          <Text style={style.card_content_text}>
+            BANCO DE DADOS - SQL Server, SQFlite(sqlite para Flutter)
+          </Text>
+          <Text style={style.card_content_text}>EXTRA - Python</Text>
+        </Card>
+        <Card titulo="Experiencias Profissionais">
+          <Text style={style.card_content_text}>
+            Suporte TI - Enter Consultoria
+          </Text>
+          <Text style={style.card_content_text}>
+            Suporte TI - Integral Sistemas
+          </Text>
+        </Card>
       </View>
     </>
   );
@@ -118,23 +102,6 @@ const style = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     width: '60%',
-    marginTop: 20,
-  },
-  card_container: {
-    width: '100%',
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginTop: 20,
-  },
-  card: {
-    width: '60%',
-    borderRadius: 5,
-    borderWidth: 1,
-    borderColor: '#939393',
-    padding: 10,
-    backfaceVisibility: '#FFF',
-  },
-  card_content: {
     marginTop: 20,
   },
   card_content_tex: {
